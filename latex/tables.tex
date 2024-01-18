@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{layers}
+
+\date{January 2024}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Layer (type)}          & \textbf{Output Shape}    & \textbf{Param \#} \\
+\hline
+conv2d (Conv2D)                & (None, 26, 26, 32)       & 320 \\
+max\_pooling2d (MaxPooling2D)  & (None, 13, 13, 32)       & 0 \\
+conv2d\_1 (Conv2D)             & (None, 11, 11, 64)       & 18,496 \\
+max\_pooling2d\_1 (MaxPooling2D)& (None, 5, 5, 64)         & 0 \\
+flatten (Flatten)              & (None, 1600)             & 0 \\
+dense (Dense)                  & (None, 128)              & 204,928 \\
+dense\_1 (Dense)               & (None, 10)               & 1,290 \\
+\hline
+\end{tabular}
+\caption{Description of the CNN Model}
+\label{table:model2}
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Layer (type)}           & \textbf{Output Shape} & \textbf{Param \#} \\
+\hline
+conv2d (Conv2D)                 & (None, 14, 14, 128)   & 3328 \\
+layer\_normalization\_5         & (None, 14, 14, 128)   & 256 \\
+leaky\_re\_lu (LeakyReLU)       & (None, 14, 14, 128)   & 0 \\
+dropout (Dropout)               & (None, 14, 14, 128)   & 0 \\
+conv2d\_1 (Conv2D)               & (None, 7, 7, 256)     & 819456 \\
+layer\_normalization\_6         & (None, 7, 7, 256)     & 512 \\
+leaky\_re\_lu\_1 (LeakyReLU)     & (None, 7, 7, 256)     & 0 \\
+dropout\_1 (Dropout)             & (None, 7, 7, 256)     & 0 \\
+conv2d\_2 (Conv2D)               & (None, 4, 4, 512)     & 2097664 \\
+layer\_normalization\_7         & (None, 4, 4, 512)     & 1024 \\
+flatten (Flatten)               & (None, 8192)          & 0 \\
+dense\_1 (Dense)                 & (None, 1)             & 8193 \\
+\hline
+\end{tabular}
+\caption{Description of the First DCGAN Model in Trial3}
+\label{table:model1}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Layer (type)}           & \textbf{Output Shape} & \textbf{Param \#} \\
+\hline
+conv2d (Conv2D)                 & (None, 14, 14, 128)   & 3328 \\
+layer\_normalization\_5         & (None, 14, 14, 128)   & 256 \\
+leaky\_re\_lu (LeakyReLU)       & (None, 14, 14, 128)   & 0 \\
+dropout (Dropout)               & (None, 14, 14, 128)   & 0 \\
+conv2d\_1 (Conv2D)               & (None, 7, 7, 256)     & 819456 \\
+layer\_normalization\_6         & (None, 7, 7, 256)     & 512 \\
+leaky\_re\_lu\_1 (LeakyReLU)     & (None, 7, 7, 256)     & 0 \\
+dropout\_1 (Dropout)             & (None, 7, 7, 256)     & 0 \\
+conv2d\_2 (Conv2D)               & (None, 4, 4, 512)     & 2097664 \\
+layer\_normalization\_7         & (None, 4, 4, 512)     & 1024 \\
+flatten (Flatten)               & (None, 8192)          & 0 \\
+dense\_2 (Dense)                 & (None, 128)           & 1048704 \\
+dense\_3 (Dense)                 & (None, 10)            & 1290 \\
+\hline
+\end{tabular}
+\caption{Description of the Second DCGAN Model in Trial3}
+\label{table:model2}
+\end{table}
+
+
+\end{document}
