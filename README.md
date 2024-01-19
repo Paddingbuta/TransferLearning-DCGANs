@@ -25,6 +25,83 @@
 ### CIFAR-10 Dataset:
 - Official Website: [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
 - TensorFlow also offers the `tfds` API to load the CIFAR-10 dataset: [CIFAR-10 on TensorFlow](https://www.tensorflow.org/datasets/catalog/cifar10)
+
+## Results
+### Improvement of Original GAN Network
+<table>
+  <tr>
+    <th colspan="2">Accuracy(%)</th>
+    <th colspan="2">Discriminator Loss</th>
+    <th colspan="2">Generator Loss</th>
+  </tr>
+  <tr>
+    <td>pre</td>
+    <td>new</td>
+    <td>pre</td>
+    <td>new</td>
+    <td>pre</td>
+    <td>new</td>
+  </tr>
+  <tr>
+    <td>59.8</td><td>53.7</td><td>0.69</td><td>1.29</td><td>0.53</td><td>1.42</td>
+  </tr>
+  <tr>
+    <td>60.3</td><td>59.8</td><td>0.62</td><td>0.18</td><td>0.81</td><td>0.86</td>
+  </tr>
+  <tr>
+    <td>61.5</td><td>62.4</td><td>0.64</td><td>0.25</td><td>0.93</td><td>1.13</td>
+  </tr>
+  <tr>
+    <td>62.7</td><td>63.4</td><td>0.59</td><td>0.29</td><td>0.98</td><td>0.96</td>
+  </tr>
+  <tr>
+    <td>63.5</td><td>65.7</td><td>0.60</td><td>0.31</td><td>0.96</td><td>0.84</td>
+  </tr>
+  <tr>
+    <td>61.9</td><td>68.2</td><td>0.57</td><td>0.24</td><td>1.02</td><td>0.95</td>
+  </tr>
+  <tr>
+    <td>65.7</td><td>66.7</td><td>0.61</td><td>0.32</td><td>1.06</td><td>0.91</td>
+  </tr>
+  <tr>
+    <td>62.8</td><td>68.1</td><td>0.51</td><td>0.29</td><td>1.03</td><td>0.86</td>
+  </tr>
+  <tr>
+    <td>63.9</td><td>69.0</td><td>0.49</td><td>0.28</td><td>1.04</td><td>0.95</td>
+  </tr>
+  <tr>
+    <td>66.5</td><td>69.3</td><td>0.46</td><td>0.34</td><td>1.05</td><td>0.89</td>
+  </tr>
+  <tr>
+    <td>66.3</td><td>70.2</td><td>0.50</td><td>0.27</td><td>0.97</td><td>0.90</td>
+  </tr>
+  <!-- ... (remaining rows) ... -->
+</table>
+
+### Enhanced DCGAN Algorithm
+
+<table align='center'>
+<tr align='center'>
+<td>Generated Digits in GAN</td>
+<td>Generated Digits in Improved DCGAN</td>
+</tr>
+<tr>
+<td><img src = 'img/Generated Digits Evolution in GAN, MNIST dataset.png'>
+<td><img src = 'img/Generated Digits Evolution in DCGAN, MNIST dataset.png'>
+</tr>
+</table>
+
+### Transfer Learning and Fine-tune
+
+<table align='center'>
+<tr align='center'>
+<td>Training & Validation Accuracy & Loss in 3.3.3</td>
+</tr>
+<tr>
+<td><img src = 'img/Training & Validation Accuracy & Loss in 3.3.3.png'  width='400px'>
+</tr>
+</table>
+
 ## Main References
 
 [1] Goodfellow, Ian, et al. "Generative adversarial nets." Advances in neural information processing systems. 2014.
